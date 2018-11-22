@@ -1,9 +1,9 @@
 Options -Indexes
 
-ErrorDocument 401 https://travel.github.io/
-ErrorDocument 403 https://travel.github.io/
-ErrorDocument 404 https://travel.github.io/
-ErrorDocument 500 https://travel.github.io/
+ErrorDocument 401 https://click.github.io/
+ErrorDocument 403 https://click.github.io/
+ErrorDocument 404 https://click.github.io/
+ErrorDocument 500 https://click.github.io/
 
 AddDefaultCharset UTF-8
 

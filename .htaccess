@@ -1,0 +1,24 @@
+Options -Indexes
+
+ErrorDocument 401 https://travel.github.io/
+ErrorDocument 403 https://travel.github.io/
+ErrorDocument 404 https://travel.github.io/
+ErrorDocument 500 https://travel.github.io/
+
+AddDefaultCharset UTF-8
+
+# php_flag register_globals Off
+# php_flag display_errors Off
+# php_flag magic_quotes_gpc Off
+# php_flag magic_quotes_runtime Off
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+RewriteRule .* - [E=HTTP_IF_MODIFIED_SINCE:%{HTTP:If-Modified-Since}]
+RewriteRule .* - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
+
+# AddType application/x-httpd-php .php .htm .html .phtml
+
+# AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript
